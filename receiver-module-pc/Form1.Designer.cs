@@ -59,10 +59,10 @@ namespace SerialReader
             this.writeLineChB = new System.Windows.Forms.CheckBox();
             this.clearBtn1 = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.clearBtn2 = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.refreshChB = new System.Windows.Forms.CheckBox();
             this.appendChB = new System.Windows.Forms.CheckBox();
+            this.refreshChB = new System.Windows.Forms.CheckBox();
+            this.clearBtn2 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -100,7 +100,7 @@ namespace SerialReader
             this.rtsChB.AutoSize = true;
             this.rtsChB.Location = new System.Drawing.Point(131, 171);
             this.rtsChB.Name = "rtsChB";
-            this.rtsChB.Size = new System.Drawing.Size(84, 17);
+            this.rtsChB.Size = new System.Drawing.Size(103, 20);
             this.rtsChB.TabIndex = 13;
             this.rtsChB.Text = "RTS Enable";
             this.rtsChB.UseVisualStyleBackColor = true;
@@ -111,7 +111,7 @@ namespace SerialReader
             this.dtrChB.AutoSize = true;
             this.dtrChB.Location = new System.Drawing.Point(10, 171);
             this.dtrChB.Name = "dtrChB";
-            this.dtrChB.Size = new System.Drawing.Size(85, 17);
+            this.dtrChB.Size = new System.Drawing.Size(104, 20);
             this.dtrChB.TabIndex = 12;
             this.dtrChB.Text = "DTR Enable";
             this.dtrChB.UseVisualStyleBackColor = true;
@@ -133,7 +133,7 @@ namespace SerialReader
             this.comStatusLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comStatusLbl.Location = new System.Drawing.Point(10, 35);
             this.comStatusLbl.Name = "comStatusLbl";
-            this.comStatusLbl.Size = new System.Drawing.Size(65, 29);
+            this.comStatusLbl.Size = new System.Drawing.Size(76, 36);
             this.comStatusLbl.TabIndex = 0;
             this.comStatusLbl.Text = "OFF";
             // 
@@ -184,7 +184,7 @@ namespace SerialReader
             "Even"});
             this.parityBitsCB.Location = new System.Drawing.Point(131, 133);
             this.parityBitsCB.Name = "parityBitsCB";
-            this.parityBitsCB.Size = new System.Drawing.Size(121, 21);
+            this.parityBitsCB.Size = new System.Drawing.Size(121, 24);
             this.parityBitsCB.TabIndex = 9;
             this.parityBitsCB.Text = "None";
             // 
@@ -196,7 +196,7 @@ namespace SerialReader
             "Two"});
             this.stopBitsCB.Location = new System.Drawing.Point(131, 105);
             this.stopBitsCB.Name = "stopBitsCB";
-            this.stopBitsCB.Size = new System.Drawing.Size(121, 21);
+            this.stopBitsCB.Size = new System.Drawing.Size(121, 24);
             this.stopBitsCB.TabIndex = 8;
             this.stopBitsCB.Text = "One";
             // 
@@ -209,7 +209,7 @@ namespace SerialReader
             "8"});
             this.dataBitsCB.Location = new System.Drawing.Point(131, 76);
             this.dataBitsCB.Name = "dataBitsCB";
-            this.dataBitsCB.Size = new System.Drawing.Size(121, 21);
+            this.dataBitsCB.Size = new System.Drawing.Size(121, 24);
             this.dataBitsCB.TabIndex = 7;
             this.dataBitsCB.Text = "8";
             // 
@@ -222,7 +222,7 @@ namespace SerialReader
             "9600"});
             this.baudRateCB.Location = new System.Drawing.Point(131, 49);
             this.baudRateCB.Name = "baudRateCB";
-            this.baudRateCB.Size = new System.Drawing.Size(121, 21);
+            this.baudRateCB.Size = new System.Drawing.Size(121, 24);
             this.baudRateCB.TabIndex = 6;
             this.baudRateCB.Text = "9600";
             // 
@@ -231,7 +231,7 @@ namespace SerialReader
             this.comPortCB.FormattingEnabled = true;
             this.comPortCB.Location = new System.Drawing.Point(131, 22);
             this.comPortCB.Name = "comPortCB";
-            this.comPortCB.Size = new System.Drawing.Size(121, 21);
+            this.comPortCB.Size = new System.Drawing.Size(121, 24);
             this.comPortCB.TabIndex = 5;
             // 
             // parityBitsLbl
@@ -239,7 +239,7 @@ namespace SerialReader
             this.parityBitsLbl.AutoSize = true;
             this.parityBitsLbl.Location = new System.Drawing.Point(7, 136);
             this.parityBitsLbl.Name = "parityBitsLbl";
-            this.parityBitsLbl.Size = new System.Drawing.Size(73, 13);
+            this.parityBitsLbl.Size = new System.Drawing.Size(89, 16);
             this.parityBitsLbl.TabIndex = 4;
             this.parityBitsLbl.Text = "PARITY BITS";
             // 
@@ -248,7 +248,7 @@ namespace SerialReader
             this.stopBitsLbl.AutoSize = true;
             this.stopBitsLbl.Location = new System.Drawing.Point(6, 109);
             this.stopBitsLbl.Name = "stopBitsLbl";
-            this.stopBitsLbl.Size = new System.Drawing.Size(63, 13);
+            this.stopBitsLbl.Size = new System.Drawing.Size(77, 16);
             this.stopBitsLbl.TabIndex = 3;
             this.stopBitsLbl.Text = "STOP BITS";
             // 
@@ -257,7 +257,7 @@ namespace SerialReader
             this.dataBitsLbl.AutoSize = true;
             this.dataBitsLbl.Location = new System.Drawing.Point(7, 79);
             this.dataBitsLbl.Name = "dataBitsLbl";
-            this.dataBitsLbl.Size = new System.Drawing.Size(63, 13);
+            this.dataBitsLbl.Size = new System.Drawing.Size(77, 16);
             this.dataBitsLbl.TabIndex = 2;
             this.dataBitsLbl.Text = "DATA BITS";
             // 
@@ -266,7 +266,7 @@ namespace SerialReader
             this.baudRatelbl.AutoSize = true;
             this.baudRatelbl.Location = new System.Drawing.Point(7, 52);
             this.baudRatelbl.Name = "baudRatelbl";
-            this.baudRatelbl.Size = new System.Drawing.Size(69, 13);
+            this.baudRatelbl.Size = new System.Drawing.Size(85, 16);
             this.baudRatelbl.TabIndex = 1;
             this.baudRatelbl.Text = "BAUD RATE";
             // 
@@ -275,7 +275,7 @@ namespace SerialReader
             this.comPortLbl.AutoSize = true;
             this.comPortLbl.Location = new System.Drawing.Point(7, 25);
             this.comPortLbl.Name = "comPortLbl";
-            this.comPortLbl.Size = new System.Drawing.Size(64, 13);
+            this.comPortLbl.Size = new System.Drawing.Size(78, 16);
             this.comPortLbl.TabIndex = 0;
             this.comPortLbl.Text = "COM PORT";
             // 
@@ -339,7 +339,7 @@ namespace SerialReader
             this.writeChB.AutoSize = true;
             this.writeChB.Location = new System.Drawing.Point(7, 51);
             this.writeChB.Name = "writeChB";
-            this.writeChB.Size = new System.Drawing.Size(51, 17);
+            this.writeChB.Size = new System.Drawing.Size(60, 20);
             this.writeChB.TabIndex = 14;
             this.writeChB.Text = "Write";
             this.writeChB.UseVisualStyleBackColor = true;
@@ -350,7 +350,7 @@ namespace SerialReader
             this.writeLineChB.AutoSize = true;
             this.writeLineChB.Location = new System.Drawing.Point(6, 23);
             this.writeLineChB.Name = "writeLineChB";
-            this.writeLineChB.Size = new System.Drawing.Size(74, 17);
+            this.writeLineChB.Size = new System.Drawing.Size(88, 20);
             this.writeLineChB.TabIndex = 13;
             this.writeLineChB.Text = "Write Line";
             this.writeLineChB.UseVisualStyleBackColor = true;
@@ -378,16 +378,6 @@ namespace SerialReader
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Receiver Control";
             // 
-            // clearBtn2
-            // 
-            this.clearBtn2.Location = new System.Drawing.Point(6, 229);
-            this.clearBtn2.Name = "clearBtn2";
-            this.clearBtn2.Size = new System.Drawing.Size(75, 29);
-            this.clearBtn2.TabIndex = 3;
-            this.clearBtn2.Text = "Clear";
-            this.clearBtn2.UseVisualStyleBackColor = true;
-            this.clearBtn2.Click += new System.EventHandler(this.clearBtn2_Click);
-            // 
             // groupBox8
             // 
             this.groupBox8.Controls.Add(this.appendChB);
@@ -399,27 +389,37 @@ namespace SerialReader
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Read Mode";
             // 
-            // refreshChB
-            // 
-            this.refreshChB.AutoSize = true;
-            this.refreshChB.Location = new System.Drawing.Point(7, 21);
-            this.refreshChB.Name = "refreshChB";
-            this.refreshChB.Size = new System.Drawing.Size(89, 17);
-            this.refreshChB.TabIndex = 0;
-            this.refreshChB.Text = "Refresh Data";
-            this.refreshChB.UseVisualStyleBackColor = true;
-            this.refreshChB.CheckedChanged += new System.EventHandler(this.refreshChB_CheckedChanged);
-            // 
             // appendChB
             // 
             this.appendChB.AutoSize = true;
             this.appendChB.Location = new System.Drawing.Point(7, 48);
             this.appendChB.Name = "appendChB";
-            this.appendChB.Size = new System.Drawing.Size(89, 17);
+            this.appendChB.Size = new System.Drawing.Size(109, 20);
             this.appendChB.TabIndex = 1;
             this.appendChB.Text = "Append Data";
             this.appendChB.UseVisualStyleBackColor = true;
             this.appendChB.CheckedChanged += new System.EventHandler(this.appendChB_CheckedChanged);
+            // 
+            // refreshChB
+            // 
+            this.refreshChB.AutoSize = true;
+            this.refreshChB.Location = new System.Drawing.Point(7, 21);
+            this.refreshChB.Name = "refreshChB";
+            this.refreshChB.Size = new System.Drawing.Size(108, 20);
+            this.refreshChB.TabIndex = 0;
+            this.refreshChB.Text = "Refresh Data";
+            this.refreshChB.UseVisualStyleBackColor = true;
+            this.refreshChB.CheckedChanged += new System.EventHandler(this.refreshChB_CheckedChanged);
+            // 
+            // clearBtn2
+            // 
+            this.clearBtn2.Location = new System.Drawing.Point(6, 229);
+            this.clearBtn2.Name = "clearBtn2";
+            this.clearBtn2.Size = new System.Drawing.Size(75, 29);
+            this.clearBtn2.TabIndex = 3;
+            this.clearBtn2.Text = "Clear";
+            this.clearBtn2.UseVisualStyleBackColor = true;
+            this.clearBtn2.Click += new System.EventHandler(this.clearBtn2_Click);
             // 
             // MainForm
             // 

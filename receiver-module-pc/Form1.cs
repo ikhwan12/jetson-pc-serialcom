@@ -1,10 +1,14 @@
-﻿using System;
+﻿
+using System;
+using System.Configuration;
+using System.Collections.Specialized;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO.Ports;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,6 +18,15 @@ namespace SerialReader
     public partial class MainForm : Form
     {
 
+        private const int APPCOMMAND_VOLUME_MUTE = 0x80000;
+        private const int APPCOMMAND_VOLUME_UP = 0xA0000;
+        private const int APPCOMMAND_VOLUME_DOWN = 0x90000;
+        private const int WM_APPCOMMAND = 0x319;
+
+        private const int MONITOR_ON = -1;
+        private const int MONITOR_OFF = 2;
+        private const int MONITOR_STANBY = 1;
+
         string dataOUT;
         string dataIn;
 
@@ -21,6 +34,12 @@ namespace SerialReader
         {
             InitializeComponent();
         }
+
+        [DllImport("user32.dll")]
+        /**
+         * https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-sendmessagew
+         */
+        private static extern IntPtr SendMessage(IntPtr hWnd, int Msg, IntPtr wParam, IntPtr lParam);
 
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -118,6 +137,11 @@ namespace SerialReader
             {
                 receivedDataRT.Text += dataIn;
             }
+            string code = ConfigurationManager.AppSettings.Get(dataIn);
+            if (dataIn != null)
+            {
+                SendMessage(this.Handle, WM_APPCOMMAND, this.Handle, new IntPtr(Convert.ToInt32(code, 16)));
+            }
         }
 
         private void dtrChB_CheckedChanged(object sender, EventArgs e)
@@ -166,6 +190,13 @@ namespace SerialReader
         private void appendChB_CheckedChanged(object sender, EventArgs e)
         {
             refreshChB.Checked = !appendChB.Checked;
+        }
+
+        private void displayManagement(int state)
+        {
+            const int SC_MONITORPOWER = 0xF170;
+            const int WM_SYSCOMMAND = 0x0112;
+            SendMessage(this.Handle, WM_SYSCOMMAND, (IntPtr)SC_MONITORPOWER, (IntPtr)state);
         }
     }
 }
