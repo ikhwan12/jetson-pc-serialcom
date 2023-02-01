@@ -30,3 +30,10 @@ This repository demonstrates the usage of serial communication between a Jetson 
 3.  Update the **COM** port of the PC in the code to match the port you are using.
 4.  Deploy the code to the Jetson Nano and PC.
 5.  Run the code on both the Jetson Nano and PC.
+
+**Action List**
+| Action | Class | Description |
+|--------|-------|-------------|
+| Mute | 0 | -- |
+| Volume Up | 1 | -- |
+| Volume Down | 2 | -- |

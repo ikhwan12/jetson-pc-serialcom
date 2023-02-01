@@ -3,13 +3,15 @@ import glob
 import serial
 import time
 
-BAUD_RATE = 9600
+BAUD_RATE = 9600                                                                                                                            
+
 
 def list_serial():
     if sys.platform.startswith('win'):
         ports = ['COM%s' % (i + 1) for i in range(256)]
     elif sys.platform.startswith('linux') or sys.platform.startswith('cygwin'):
-        ports = glob.glob('/dev/tty[A-Za-z]*')
+        ports = glob.glob('/dev/tty*')
+        print('linux check')
     elif sys.platform.startswith('darwin'):
         ports = glob.glob('/dev/tty.*')
     else:
@@ -30,12 +32,15 @@ if __name__ == "__main__":
     print("Available Serial Ports:", list_available_ports)
     if len(list_available_ports) > 0:
         used_port = list_available_ports[0]
-        ser = serial.Serial(used_port, BAUD_RATE, timeout=0.050)
+        ser = serial.Serial('/dev/ttyTHS1', BAUD_RATE, timeout=1)
         count = 0
 
         while True:
+            print(bytes('{}'.format(count), 'utf-8'))
             ser.write(bytes('{}'.format(count), 'utf-8'))
             time.sleep(1)
             count += 1
+            if count == 50:
+                break
     else:
         print("No available serial port.")
